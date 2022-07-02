@@ -4,8 +4,11 @@
 
 int main()
 {
-  sf::RenderWindow window(sf::VideoMode(sf::Vector2u(200,200)),"Works"); 
-  sf::CircleShape shape(100.f); 
+  sf::RenderWindow window(sf::VideoMode(sf::Vector2u(1920,1800)),"Works"); 
+  sf::CircleShape shape(100.f);
+  sf::CircleShape shape1(50.0f); 
+  shape1.setPosition(sf::Vector2f(200,500));
+  shape1.setFillColor(sf::Color::Green);
   shape.setFillColor(sf::Color::Red);
   while(window.isOpen()){ 
   sf::Event event; 
@@ -17,6 +20,7 @@ int main()
   } 
   window.clear();
   window.draw(shape); 
+  window.draw(shape1);
   window.display();
   } 
 }
